@@ -27,7 +27,7 @@ interface PublicationCardProps {
 export function PublicationCard({ publication }: PublicationCardProps) {
 
   return (
-    <Card className="group h-full transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-sm">
+    <Card className="group h-88 transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-sm">
       <CardHeader className="gap-4">
         <div className="flex items-start justify-between gap-3">
           {publication.category && (
@@ -42,17 +42,19 @@ export function PublicationCard({ publication }: PublicationCardProps) {
         </div>
 
         <CardTitle className="text-sm leading-snug">{publication.title}</CardTitle>
-        <CardDescription className="text-sm leading-relaxed">{publication.description}</CardDescription>
       </CardHeader>
 
-      <CardContent className="pb-0">
+      <CardContent className="flex min-h-0 flex-1 flex-col gap-4">
+        <CardDescription className="line-clamp-5 flex-1 overflow-hidden text-sm leading-relaxed">
+          {publication.description}
+        </CardDescription>
         <p className="inline-flex items-start gap-1.5 text-xs text-muted-foreground">
           <Users className="mt-0.5 size-3.5 shrink-0" />
           {publication.authors}
         </p>
       </CardContent>
 
-      <CardFooter className="border-t border-border/60 !p-5 !pb-0 flex items-center justify-between gap-3 text-xs text-muted-foreground">
+      <CardFooter className="mt-auto border-t border-border/60 p-5! pb-0! flex items-center justify-between gap-3 text-xs text-muted-foreground">
         <span className="truncate">{publication.journal ?? "Preprint em avaliacao"}</span>
         {publication.doi && (
           <a

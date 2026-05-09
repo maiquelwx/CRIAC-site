@@ -1,37 +1,25 @@
 import { Bell, MoonStar, Search, Settings2, SunMedium } from "lucide-react"
+import { Link } from "react-router-dom"
 
 import { Button } from "@/components/ui/button"
 import { useTheme } from "@/components/theme-provider"
 
-const navItems = [
-  { label: "Eventos", href: "#events" },
-  { label: "Publicacoes", href: "#publications" },
-  { label: "Pesquisadores", href: "#members" },
-]
-
 export function Navbar() {
   const { theme, setTheme } = useTheme()
 
-  const handleScroll = (href: string) => {
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
   return (
     <header className="sticky top-4 z-40 mx-auto mt-4 flex w-[calc(100%-2rem)] max-w-7xl items-center justify-between rounded-full border border-border/60 bg-background/85 px-4 py-2 shadow-sm backdrop-blur md:px-6">
-      <button className="flex items-center gap-3 hover:opacity-80 transition-opacity" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-        <img src="/Logo-solido.svg" alt="CRIEC" className="h-9 w-9" />
-        <p className="font-heading text-base font-semibold tracking-tight">CRIEC</p>
-      </button>
+      <Button asChild variant="ghost" className="h-auto rounded-full px-2 py-1 hover:bg-transparent">
+        <Link to="/" className="flex items-center gap-3 transition-opacity hover:opacity-80">
+          <img src="/Logo-solido.svg" alt="CRIEC" className="h-9 w-9" />
+          <p className="font-heading text-base font-semibold tracking-tight">CRIEC</p>
+        </Link>
+      </Button>
 
       <nav className="hidden items-center gap-1 md:flex">
-        {navItems.map((item) => (
-          <Button key={item.label} variant="ghost" size="sm" className="rounded-full" onClick={() => handleScroll(item.href)}>
-            {item.label}
-          </Button>
-        ))}
+        <Button asChild variant="ghost" size="sm" className="rounded-full">
+          <Link to="/equipe">Equipe</Link>
+        </Button>
       </nav>
 
       <div className="flex items-center gap-1">

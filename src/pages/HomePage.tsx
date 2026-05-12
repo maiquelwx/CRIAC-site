@@ -9,6 +9,7 @@ import {
 	HoverCardTrigger,
 } from "@/components/ui/hover-card"
 import partners from "@/data/partners.json"
+import { Link } from "react-router-dom"
 
 function HeroSection() {
 	return (
@@ -51,11 +52,31 @@ function HeroSection() {
 function SobreProjeto() {
 	return (
 		<section className="relative md:flex md:gap-3">
-			<img
-				src="/Logo-outline.svg"
-				alt="Logo CRIEC outline"
-				className="absolute top-1/2 left-1/2 max-h-full w-screen -translate-1/2 opacity-30 md:static md:translate-0 md:opacity-100"
-			/>
+			<div className="relative flex items-center justify-center">
+				<img
+					src="/Logo-outline.svg"
+					alt="Logo CRIEC outline"
+					className="absolute top-1/2 left-1/2 max-h-full w-screen -translate-1/2 opacity-30 md:static md:translate-0 md:opacity-100"
+				/>
+
+				{/* Região superior — Clima */}
+				<Link
+					to="/dashboard?view=clima"
+					className="absolute top-[2%] left-[28%] z-20 h-[38%] w-[44%] cursor-pointer"
+				/>
+
+				{/* Região esquerda — Vulnerabilidade */}
+				<Link
+					to="/dashboard?view=vulnerabilidade"
+					className="absolute top-[46%] left-[14%] z-20 h-[30%] w-[26%] cursor-pointer rounded-full transition"
+				/>
+
+				{/* Região direita — Desastres */}
+				<Link
+					to="/dashboard?view=desastres"
+					className="absolute top-[46%] right-[14%] z-20 h-[30%] w-[26%] cursor-pointer rounded-full transition"
+				/>
+			</div>
 
 			<div className="relative z-10 space-y-5 p-6 text-lg">
 				<p>

@@ -3,6 +3,7 @@
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/nunito-sans";
 @import "@fontsource-variable/montserrat";
+@import "leaflet/dist/leaflet.css";
 
 @custom-variant dark (&:is(.dark *));
 

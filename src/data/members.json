@@ -1,0 +1,234 @@
+[
+  {
+    "name": "Amália Buchweitz Garcez",
+    "role": "ic",
+    "institution": "UFRGS",
+    "area": "",
+    "description": "Neste projeto, investigamos a ocorrência de eventos climáticos extremos (EE) no Brasil entre 1961 e 2020, utilizando dados das estações meteorológicas do Instituto Nacional de Meteorologia (INMET) e do banco de dados de reanálise ERA5, além de índices climáticos recomendados pela Organização Meteorológica Mundial (OMM). Adicionalmente, aplicamos os mesmos dados a técnicas de aprendizado de máquina não supervisionado, particularmente LSTM Autoencoders, para detecção de anomalias nos dados. Atualmente, estamos comparando os resultados das análises estatísticas e de aprendizado de máquina para melhor compreender o aspecto multivariado dos extremos climáticos, bem como para tentar identificar os principais fatores que levam a uma anomalia nos dados. Esperamos que esses resultados reforcem o potencial das abordagens baseadas em IA como uma ferramenta complementar para a detecção automatizada de EE e indiquem os caminhos para seu aprimoramento futuro, além de melhorar nossa compreensão das relações entre as variáveis meteorológicas.",
+    "links": {
+      "lattes": "http://lattes.cnpq.br/8683090409880580"
+    },
+    "imgPath": "/Equipe/ABGarcez.webp"
+  },
+  {
+    "name": "Ana Lúcia Antonioli",
+    "role": "mestrando",
+    "institution": "UFRGS",
+    "area": "",
+    "description": "Machine Learning com aplicação de uma rede neural convolucional para predição de temperatura em Porto Alegre utilizando dados climatológicos históricos espaciais do ERA5, com objetivo de posteriormente fazer a previsão antecipada de eventos extremos climáticos relacionados a ondas de calor e aumento de temperatura.",
+    "links": {
+      "lattes": "http://lattes.cnpq.br/1829936153530290"
+    },
+    "imgPath": "/Equipe/ALAntonioli.webp"
+  },
+  {
+    "name": "Bruna dos Santos Borba",
+    "role": "ic",
+    "institution": "UFRGS",
+    "area": "",
+    "description": "A pesquisa envolve a análise de dados do World Values Survey (WVS), com foco na construção de indicadores a partir de variáveis relacionadas a valores, crenças e atitudes. A partir disso, são realizadas análises exploratórias que permitem investigar padrões nos dados, bem como identificar diferenças entre grupos populacionais. Além disso, são considerados recortes sociodemográficos, como gênero, renda e escolaridade, possibilitando uma análise mais detalhada da distribuição dessas variáveis entre diferentes perfis.",
+    "links": {
+      "lattes": "http://lattes.cnpq.br/2399224281962566"
+    },
+    "imgPath": "/Equipe/BSBorba.webp"
+  },
+  {
+    "name": "Carolina Brito",
+    "role": "professor",
+    "institution": "UFRGS",
+    "area": "",
+    "description": "Carolina atua na área de detecção de eventos climáticos extremos e na construção de mapas de vulnerabilidade climática no Rio Grande do Sul, integrando dados de desastres com indicadores sociais e geográficos. Seu grupo de pesquisa também desenvolve modelos para identificar e prever padrões climáticos utilizando técnicas de inteligência artificial, com o objetivo de compreender melhor os riscos associados às mudanças climáticas e apoiar a tomada de decisão.",
+    "links": {
+      "lattes": "http://lattes.cnpq.br/0785743182319556"
+    },
+    "imgPath": "/Equipe/CBrito.webp"
+  },
+  {
+    "name": "Daniela Buske",
+    "role": "professor",
+    "institution": "UFPel",
+    "area": "",
+    "description": "Daniela Buske atua na coordenação e desenvolvimento de pesquisas em modelagem matemática aplicada, com ênfase em eventos extremos, hidrologia, epidemiologia e fenômenos ambientais. No projeto, sua atuação está voltada à integração entre modelagem matemática, análise de dados e suporte à tomada de decisão, especialmente no desenvolvimento de metodologias aplicadas à previsão e monitoramento de cenários críticos. Também coordena ações interdisciplinares envolvendo pesquisadores de diferentes áreas, promovendo a conexão entre pesquisa científica, inovação tecnológica e demandas da sociedade frente aos desafios impostos pelas mudanças climáticas e pelos desastres ambientais.",
+    "links": {
+      "lattes": "http://lattes.cnpq.br/3894096111082082"
+    },
+    "imgPath": "/Equipe/DBuske.webp"
+  },
+  {
+    "name": "Fernanda Batista",
+    "role": "mestrando",
+    "institution": "UFRGS",
+    "area": "",
+    "description": "Minha pesquisa está baseada no histórico de eventos extremos no Rio Grande do Sul, utilizando a reanálise ERA5, com foco na análise estatística e espacial de eventos climáticos de precipitação, temperatura e ventos, buscando compreender a evolução desses eventos ao longo dos anos e as dinâmicas atmosféricas que causam esses fenômenos. Além disso, o projeto também tem como objetivo prever os eventos extremos usando técnicas de Machine Learning com o intuito de antecipar a ocorrência de desastres e apoiar tomadas de decisão.",
+    "links": {
+      "lattes": ""
+    },
+    "imgPath": "/Equipe/FBatista.webp"
+  },
+  {
+    "name": "Felipe Crivellaro Minuzzi",
+    "role": "professor",
+    "institution": "UFRGS",
+    "area": "",
+    "description": "É professor do Instituto de Matemática e Estatística da UFRGS, atuando no Departamento de Matemática Pura e Aplicada. Sua pesquisa abrange dinâmica dos fluidos, métodos numéricos para equações diferenciais parciais e inteligência artificial aplicada a essas áreas. Tem experiência no desenvolvimento de metodologias de aprendizado profundo e na aplicação de redes neurais para previsão de fenômenos oceânicos. No projeto, tem atuado no desenvolvimento de previsão de eventos extremos utilizando Inteligência Artificial.",
+    "links": {
+      "lattes": "http://lattes.cnpq.br/8425183715728344"
+    },
+    "imgPath": "/Equipe/FCMinuzzi.webp"
+  },
+  {
+    "name": "Gabriel Bonow Münchow",
+    "role": "professor",
+    "institution": "UFRGS",
+    "area": "",
+    "description": "Minha linha de pesquisa concentra-se na integração entre modelagem física da atmosfera e técnicas de inteligência artificial para aprimorar a previsão de eventos extremos de precipitação e temperatura. Atuo no desenvolvimento, avaliação e aplicação de modelos numéricos de previsão do tempo, explorando tanto os fundamentos físicos que governam os processos atmosféricos.",
+    "links": {
+      "lattes": "http://lattes.cnpq.br/8280352824217134"
+    },
+    "imgPath": "/Equipe/GBMunchow.webp"
+  },
+  {
+    "name": "Germano Hartmann Brill",
+    "role": "ic",
+    "institution": "UFRGS",
+    "area": "",
+    "description": "Meu estudo busca prever eventos de cheia no Guaíba a partir de dados de estações hidrológicas em diferentes bacias do Rio Grande do Sul. Para isso, analiso a persistência de séries temporais do nível dos rios e aplico grafos de visibilidade para transformá-las em redes complexas. Ao investigar a estrutura topológica desses grafos, almejo extrair propriedades matemáticas capazes de antecipar o comportamento do nível da água na região.",
+    "links": {
+      "lattes": "http://lattes.cnpq.br/7291766740813674"
+    },
+    "imgPath": "/Equipe/GHBrill.webp"
+  },
+  {
+    "name": "José Rafael Bordin",
+    "role": "professor",
+    "institution": "UFPel",
+    "area": "",
+    "description": "",
+    "links": {
+      "lattes": "http://lattes.cnpq.br/9477024092198309"
+    },
+    "imgPath": "/Equipe/JRBordin.webp"
+  },
+  {
+    "name": "Juliano Almeida Machado",
+    "role": "mestrando",
+    "institution": "UFRGS",
+    "area": "",
+    "description": "Previsão de séries temporais hidrológicas usando modelos de aprendizado profundo;",
+    "links": {
+      "lattes": "https://lattes.cnpq.br/5682045341770710"
+    },
+    "imgPath": "/Equipe/JAMachado.webp"
+  },
+  {
+    "name": "Maiquel Cavalheiro",
+    "role": "ic",
+    "institution": "UFRGS",
+    "area": "",
+    "description": "",
+    "links": {
+      "lattes": ""
+    },
+    "imgPath": "/Equipe/MCavalheiro.webp"
+  },
+  {
+    "name": "Mateus Henrique Köhler",
+    "role": "professor",
+    "institution": "UFSM",
+    "area": "",
+    "description": "Doutor em Física pela UFRGS (2018), foi pesquisador visitante na Universidade de Uppsala (2021). É membro da Sociedade Brasileira de Física e professor adjunto do Departamento de Física da UFSM. É bolsista de produtividade em pesquisa do CNPq - Nível C. Atua em Física da Matéria Condensada com enfoque em Simulações Computacionais em diferentes níveis de teoria. Atualmente tem interesse em sistemas de interface, dinâmica de fluidos em interfaces e Machine Learning aplicado à modelagem computacional.",
+    "links": {
+      "lattes": "http://lattes.cnpq.br/5754140057757003"
+    },
+    "imgPath": "/Equipe/MHKohler.webp"
+  },
+  {
+    "name": "Raí Nunes dos Santos",
+    "role": "pos-doutorando",
+    "institution": "UFRGS",
+    "area": "",
+    "description": "Desenvolve uma abordagem geográfica dos desastres, com ênfase na análise da vulnerabilidade e da suscetibilidade a eventos extremos. Seu trabalho articula diferentes campos do conhecimento e integra múltiplas bases de dados, visando compreender de forma aprofundada os impactos territoriais e suas repercussões no cotidiano da população.",
+    "links": {
+      "lattes": "http://lattes.cnpq.br/4519437440343847"
+    },
+    "imgPath": "/Equipe/RNSantos.webp"
+  },
+  {
+    "name": "Régis Sperotto de Quadros",
+    "role": "professor",
+    "institution": "UFPel",
+    "area": "",
+    "description": "Régis Sperotto de Quadros atua no desenvolvimento de pesquisas em modelagem matemática, métodos numéricos e simulação computacional aplicados a problemas multidisciplinares. No projeto, contribui especialmente com o desenvolvimento e análise de modelos matemáticos voltados à compreensão de fenômenos ambientais e hidrológicos, além da integração de ferramentas computacionais para apoio às análises e previsões. Sua atuação também envolve a formação de recursos humanos e o fortalecimento de iniciativas colaborativas entre diferentes áreas do conhecimento, ampliando o impacto científico e tecnológico das ações desenvolvidas.",
+    "links": {
+      "lattes": "http://lattes.cnpq.br/2408574220216968"
+    },
+    "imgPath": "/Equipe/RSQuadros.webp"
+  },
+  {
+    "name": "Renan Oliveira Nunes",
+    "role": "pos-doutorando",
+    "institution": "UFRGS",
+    "area": "",
+    "description": "Minha pesquisa se concentra no uso de Machine Learning aplicado à previsão de precipitação e eventos extremos relacionados ao clima. O foco do trabalho é identificar padrões e marcadores atmosféricos que melhorem a capacidade preditiva atual. O objetivo é subsidiar o desenvolvimento de sistemas de alertas precoces, contribuindo, assim, para a mitigação de riscos e a redução de danos socioambientais associados a desastres naturais.",
+    "links": {
+      "lattes": "http://lattes.cnpq.br/7206695453408827"
+    },
+    "imgPath": "/Equipe/RONunes.webp"
+  },
+  {
+    "name": "Ricardo Gava Rodrigues Junior",
+    "role": "ic",
+    "institution": "UFRGS",
+    "area": "",
+    "description": "Desenvolvimento e manutenção da infraestrutura web do projeto, incluindo website, dashboards de visualização de dados e gestão de banco de dados.",
+    "links": {
+      "lattes": "http://lattes.cnpq.br/1659528549784634",
+      "github": "https://github.com/Jutier"
+    },
+    "imgPath": "/Equipe/RGava.webp"
+  },
+  {
+    "name": "Sebastián Gonçalves",
+    "role": "professor",
+    "institution": "UFRGS",
+    "area": "",
+    "description": "Análise de séries temporais conjuntas de chuvas e níveis de rios das estações hidrometeorológicas da bacia do Guaíba, utilizando técnicas de machine learning, para análise de padrões espácio-temporal com possível aplicação a predição de eventos extremos. Análise de variabilidade e anomalias de temperaturas oceânicas utilizando técnicas de matrizes aleatórias e redes de visibilidade (visibility graphs) para caracterizar correlações e estruturas temporais complexas.",
+    "links": {
+      "lattes": "https://lattes.cnpq.br/8797735093080763"
+    },
+    "imgPath": "/Equipe/SGoncalves.webp"
+  },
+  {
+    "name": "Thiago Puccinelli Orlandi Nogueira",
+    "role": "pos-doutorando",
+    "institution": "UFSM",
+    "area": "",
+    "description": "Obteve os títulos de mestre e doutor em Física pela Universidade Federal de Pelotas (UFPel), com pesquisas na área de sistemas complexos e materiais polimórficos. Atua em Física Computacional, com experiência em programação científica em Python e FORTRAN, Dinâmica Molecular clássica e ab initio, além do desenvolvimento e aplicação de potenciais baseados em aprendizado de máquina. Utiliza ferramentas como LAMMPS, ASE, VASP e EsPReSso em pesquisas envolvendo materiais e líquidos complexos. Seus interesses incluem Física da Complexidade, Mecânica Estatística, Física da Matéria Condensada e Física Computacional.",
+    "links": {
+      "lattes": "http://lattes.cnpq.br/5068320085993516"
+    },
+    "imgPath": "/Equipe/TPONogueira.webp"
+  },
+  {
+    "name": "Vivian Dornelas",
+    "role": "professor",
+    "institution": "UFSB",
+    "area": "",
+    "description": "Física com ênfase em sistemas complexos, investiga a dinâmica de sistemas socioambientais sob estresse. Sua pesquisa visa compreender como eventos climáticos extremos e desastres afetam estruturas sociais, buscando traduzir indicadores sociais em modelos que auxiliem na compreensão e mitigação de danos em populações vulneráveis.",
+    "links": {
+      "lattes": "https://lattes.cnpq.br/0469773504082863"
+    },
+    "imgPath": "/Equipe/VDornelas.webp"
+  },
+  {
+    "name": "Yan Araujo Santos da Campo",
+    "role": "doutorando",
+    "institution": "UFSM",
+    "area": "",
+    "description": "Estudante de doutorado em Física Teórica na UFSM, foi vencedor dos prêmios ACS Publications Best Poster Prize e Bernhard Gross (SBPMat, 2022). Tem experiência com aplicação de programação, métodos de simulações computacionais e redes neurais. Tem atuado em análises de sistemas complexos e interfaces, bem como na predição de propriedades físicas e químicas.",
+    "links": {
+      "lattes": "http://lattes.cnpq.br/1189633244845231"
+    },
+    "imgPath": "/Equipe/YASCampo.webp"
+  }
+]

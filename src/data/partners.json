@@ -1,0 +1,22 @@
+[
+  {
+    "name": "UFRGS",
+    "darkPath": "/Parceiros/Logo-UFRGS-dark.webp",
+    "lightPath": "/Parceiros/Logo-UFRGS-light.webp"
+  },
+  {
+    "name": "UFPel",
+    "darkPath": "/Parceiros/Logo-UFPel-dark.webp",
+    "lightPath": "/Parceiros/Logo-UFPel-light.webp"
+  },
+  {
+    "name": "UFSM",
+    "darkPath": "/Parceiros/Logo-UFSM-dark.webp",
+    "lightPath": "/Parceiros/Logo-UFSM-light.webp"
+  },
+  {
+    "name": "FAPERGS",
+    "darkPath": "/Parceiros/Logo-FAPERGS.webp",
+    "lightPath": "/Parceiros/Logo-FAPERGS.webp"
+  }
+]

@@ -46,7 +46,7 @@ export default function Marquee({
 
 	return (
 		<div className="relative overflow-hidden">
-			<style jsx global>{`
+			<style>{`
 				.marquee-container::-webkit-scrollbar {
 					display: none;
 				}

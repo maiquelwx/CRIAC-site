@@ -11,7 +11,10 @@ node_modules
 dist
 dist-ssr
 *.local
+<<<<<<< HEAD
 src/data/json/
+=======
+>>>>>>> b3b0f5891bb56c9a1088906268014e11b7e5aad0
 
 # Editor directories and files
 .vscode/*

@@ -1,14 +1,12 @@
 import { CAMADAS_DISPONIVEIS } from "@/services/dataService"
 
-// ─── Tipos ────────────────────────────────────────────────────────────────────
-
 interface CadUnicoPeriodo {
   id: string
   label: string
 }
 
 interface LayerMenuProps {
-  slots: string[]                          // array de até 3 ids, ex: ["municipios", "bacias", ""]
+  slots: string[]  // array limitada em até 3 ids, ex: ["municipios", "bacias", ""]
   onSetSlot: (slot: number, id: string) => void
   onLimparSlot: (slot: number) => void
   opacidade: number
@@ -28,7 +26,7 @@ function OpacitySlider({
   onChange: (v: number) => void
 }) {
   return (
-    <div className="mb-4 space-y-2">
+    <div className="mb-4 space-y-2 rounded-xl border border-slate-200 bg-slate-50 p-3">
       <div className="flex items-center justify-between text-[11px] text-slate-500">
         <span>Transparência</span>
         <span>{Math.round(value * 100)}%</span>
@@ -62,9 +60,6 @@ function CadUnicoPeriodSelector({
     <div className="mb-4 space-y-2 rounded-xl border border-slate-200 bg-slate-50 p-3">
       <div className="flex items-center justify-between text-[11px] text-slate-500">
         <span>Período CadÚnico</span>
-        <span className="text-[11px] text-slate-600">
-          {disabled ? "inativo" : "ativo"}
-        </span>
       </div>
       <select
         value={value}
@@ -78,9 +73,6 @@ function CadUnicoPeriodSelector({
           </option>
         ))}
       </select>
-      <p className="text-[11px] text-slate-500">
-        Selecione o ano dos dados do CadÚnico para visualizar.
-      </p>
     </div>
   )
 }
@@ -178,14 +170,16 @@ export function LayerMenu({
       </section>
 
       {/* 3. Seleção de período para a camada CadÚnico */}
-      <section aria-label="Período CadÚnico">
-        <CadUnicoPeriodSelector
-          value={periodoCadUnico}
-          options={periodosCadUnico}
-          onChange={onPeriodoCadUnicoChange}
-          disabled={!cadunicoAtivo}
-        />
-      </section>
+      {cadunicoAtivo && (
+        <section aria-label="Período CadÚnico">
+          <CadUnicoPeriodSelector
+            value={periodoCadUnico}
+            options={periodosCadUnico}
+            onChange={onPeriodoCadUnicoChange}
+            disabled={false}
+          />
+        </section>
+      )}
 
     </aside>
   )

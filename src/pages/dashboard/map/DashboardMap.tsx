@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet"
+import { useMap } from "react-leaflet"
 import type { GeoJsonObject, FeatureCollection } from "geojson"
 import { fetchCamada, CAMADAS_DISPONIVEIS } from "@/services/dataService"
 import L from "leaflet"
@@ -36,7 +37,7 @@ const LegendaCadUnico = () => (
 )
 
 export function DashboardMap({ camadas, opacidade, periodoCadUnico }: DashboardMapProps) {
-  // PARA:
+
 const [dados, setDados] = useState<Record<string, GeoJsonObject>>({})
 const [carregando, setCarregando] = useState<Record<string, boolean>>({})
 const [erros, setErros] = useState<Record<string, boolean>>({})
@@ -206,8 +207,6 @@ useEffect(() => {
           cadunicoPorMunicipio[cdMun] = feature.properties
         })
 
-        console.log(`ℹ️ CadÚnico: ${cadunico.features.length} features → ${Object.keys(cadunicoPorMunicipio).length} municípios únicos`)
-
         // Contar populações por bacia
         Object.entries(cadunicoPorMunicipio).forEach(([cdMun, props]: [string, any]) => {
           const baciaNome = municipioBacia[cdMun] || "Desconhecida"
@@ -264,13 +263,36 @@ useEffect(() => {
           }),
         }
 
-        console.log(`✓ Bacias combinadas:`, Object.keys(estatisticasPorBacia).map(b => `${b} (${estatisticasPorBacia[b].municipios}m, ${estatisticasPorBacia[b].taxaMediaFaixa1e2.toFixed(1)}%)`))
         setDados((ant) => ({ ...ant, [keyCombinado]: combinado }))
         setRenderKey(k => k + 1)
         setCarregando((ant) => ({ ...ant, [keyCombinado]: false }))
       }
     }
   }, [camadas, periodoCadUnico, dados, carregando])
+
+
+function ZoomControl() {
+  const map = useMap()
+
+  return (
+    <div className="absolute bottom-4 left-4 z-[1000] flex flex-col gap-1">
+      <button
+        onClick={() => map.zoomIn()}
+        className="flex h-8 w-8 items-center justify-center rounded-lg border bg-background/95 shadow-md backdrop-blur transition hover:bg-muted"
+        aria-label="Aproximar"
+      >
+        <span className="text-base leading-none">+</span>
+      </button>
+      <button
+        onClick={() => map.zoomOut()}
+        className="flex h-8 w-8 items-center justify-center rounded-lg border bg-background/95 shadow-md backdrop-blur transition hover:bg-muted"
+        aria-label="Afastar"
+      >
+        <span className="text-base leading-none">−</span>
+      </button>
+    </div>
+  )
+}
 
   function estiloCamada(id: string, feature?: any): any {
   // Para CadÚnico ou visualização combinada, estilo baseado na taxa de pobreza
@@ -281,7 +303,7 @@ useEffect(() => {
       if (taxa === undefined || taxa === null) {
         return {
           color: "#6b7280",
-          weight: 1,
+          weight: 0.5,
           fillColor: "#f3f4f6",
           fillOpacity: 0.3 * opacidade,
           opacity: opacidade,
@@ -293,13 +315,9 @@ useEffect(() => {
       if (taxa >= 15 && taxa <= 25) color = "#f59e0b" // amarelo média
       if (taxa > 25) color = "#ef4444" // vermelho alta
 
-      if (id === "bacias_combinado") {
-        console.log(`🎨 BACIA ${feature.properties.regiao}: taxa=${taxa.toFixed(1)}% [${taxa < 15 ? "verde" : taxa <= 25 ? "amarelo" : "vermelho"}] cor=${color}`)
-      }
-
       return {
         color: "#000000",
-        weight: 3,
+        weight: 0.5,
         fillColor: color,
         fillOpacity: 0.9 * opacidade,
         opacity: opacidade,
@@ -310,12 +328,23 @@ useEffect(() => {
     const config = CAMADAS_DISPONIVEIS[id]
     if (!config) return {
       color: "#3388ff",
-      weight: 1,
-      fillOpacity: 0.3,
-      opacity: 1,
+      weight: 0.5,
+      fillOpacity: 0.3 * opacidade,
+      opacity: opacidade,
     }
 
-    const estilo = config.estilo as { fillOpacity?: number; opacity?: number }
+    const estilo = config.estilo as {
+      color?: string
+      weight?: number
+      fillOpacity?: number
+      opacity?: number
+    }
+
+    return {
+      ...estilo,
+      fillOpacity: (estilo.fillOpacity ?? 0.3) * opacidade,
+      opacity: estilo.opacity ?? opacidade,
+    }
   }
 
   const estaCarregando = Object.values(carregando).some(Boolean)
@@ -343,18 +372,15 @@ useEffect(() => {
       {/* Mapa Leaflet com camadas GeoJSON ativas */}
       <MapContainer
         center={[-30.0, -51.0]}
-        zoom={8}
-        className="h-full w-full"
+        zoom={7}
+        className="h-full w-full border-0 outline-none"
+        zoomControl={false}
       >
+        <ZoomControl />
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         />
-
-        {(() => {
-          console.log(`📍 ${camadas.join(", ") || "(nenhuma)"}`)
-          return null
-        })()}
 
         {camadas.includes("municipios") && camadas.includes("cadunico") ? (
           // Visualização combinada municípios + cadunico
@@ -440,7 +466,7 @@ useEffect(() => {
                 pointToLayer={(feature, latlng) => {
                   // Renderiza pontos como círculos (estilizáveis via style())
                   return L.circleMarker(latlng, {
-                    radius: 5,
+                    radius: 3,
                     ...estiloCamada(id, feature),
                   })
                 }}

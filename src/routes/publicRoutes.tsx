@@ -3,6 +3,7 @@ import { MembersPage } from "@/pages/MembersPage"
 import { PublicationsPage } from "@/pages/PublicationsPage"
 import { EventsPage } from "@/pages/EventsPage"
 import { NotFoundPage } from "@/pages/404Page"
+import DashboardPage from "@/pages/dashboard"
 
 export const publicRoutes = [
 	{
@@ -42,5 +43,9 @@ export const publicRoutes = [
 	{
 		path: "*",
 		element: <NotFoundPage />,
+	},
+	{
+		path:'dashboard',
+		element: <DashboardPage />,
 	},
 ]

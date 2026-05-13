@@ -27,7 +27,7 @@ export function DashboardPage() {
   const config = CONFIG[view] ?? CONFIG.clima
 
   const [slots, setSlots] = useState<string[]>([...config.camadasIniciais])
-  const [opacidadeCamadas, setOpacidadeCamadas] = useState(0.8)
+  const [opacidadeCamadas, setOpacidadeCamadas] = useState(0.5)
   const [periodoCadUnico, setPeriodoCadUnico] = useState(
     () => obterPeriodosCadUnico()[0].id
   )
@@ -41,19 +41,22 @@ export function DashboardPage() {
   }
 
   function limparSlot(slot: number) {
-    setSlots((ant) => ant.filter((_, i) => i !== slot))
+    setSlots((ant) => {
+      const novo = [...ant]
+      novo[slot] = ""
+      return novo
+    })
   }
 
   return (
     <div className="flex h-svh flex-col">
 
       {/* Cabeçalho da página — título da view ativa (clima, vulnerabilidade, desastres) */}
-      <header className="flex items-center gap-4 border-b px-6 py-3">
-        <h1 className="font-heading text-lg font-semibold">{config.label}</h1>
+      <header className="flex items-center gap-4 z-[1000] border-b px-6 py-3">
       </header>
 
       {/* Área de trabalho — mapa ocupa o espaço restante, menu flutua sobre ele */}
-      <main className="relative flex-1">
+      <main className="relative flex-1 isolate">
         <DashboardMap
           camadas={slots.filter(Boolean)}
           opacidade={opacidadeCamadas}

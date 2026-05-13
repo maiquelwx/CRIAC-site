@@ -80,18 +80,18 @@ const CADUNICO_PERIODOS: CadUnicoPeriodo[] = Array.from(
     return {
       id: ano,
       label: ano,
-      fonte: "/data/CadUnico_RS_Completo.geojson",
+      fonte: "/src/data/json/CadUnico_RS_Completo.geojson",
     }
   }
 )
 
 // Em FONTES_LOCAIS, adicionar os novos arquivos .json
 const FONTES_LOCAIS: Record<string, string> = {
-  municipios:     "/data/Divisão_Municipal_RS.geojson",
-  bacias:         "/data/Regiões_Hidrográficas_RS.geojson",
-  curvas_nivel:   "/data/curvas_nivel_preview.json",      // MultiLineString
-  localidades:    "/data/loc_cidade_p.json",     // Point
-  area_afetada_2024: "/data/area_diretamente_atingida_2024.json",   // Polygon
+  municipios:     "/src/data/json/Divisão_Municipal_RS.geojson",
+  bacias:         "/src/data/json/Regiões_Hidrográficas_RS.geojson",
+  curvas_nivel:   "/src/data/json/curvas_nivel_preview.json",      // MultiLineString
+  localidades:    "/src/data/json/loc_cidade_p.json",     // Point
+  area_afetada_2024: "/src/data/json/area_diretamente_atingida_2024.json",   // Polygon
 }
 
 // Essa é a única função q o mapa chama
@@ -124,9 +124,9 @@ export async function fetchCamada(
 
   const json: FeatureCollection = await res.json()
 
-  // Curvas de nível são muito pesadas — limitando para não travar o browser
+  // Curvas de nível são muito pesadas, limitando para não travar o browser
   if (id === "curvas_nivel") {
-    console.warn(`curvas_nivel: ${json.features.length} features — limitando a 1000 para preview`)
+    console.warn(`curvas_nivel: ${json.features.length} features — limitando a 100 para preview`)
     return { ...json, features: json.features.slice(0, 100) }
   }
 
@@ -144,10 +144,7 @@ export async function fetchCamada(
         return ano === periodoCadUnico
       }),
     }
-    console.log(`CadÚnico ${periodoCadUnico}: ${json.features.length} features → ${filtrado.features.length} filtradas`)
-  } else {
-    console.log(`Camada "${id}": ${json.features.length} features carregadas`)
-  }
+  } 
 
   return filtrado
 }

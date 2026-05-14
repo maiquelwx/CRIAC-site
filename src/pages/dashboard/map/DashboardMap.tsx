@@ -275,7 +275,7 @@ function ZoomControl() {
   const map = useMap()
 
   return (
-    <div className="absolute bottom-4 left-4 z-[1000] flex flex-col gap-1">
+    <div className="absolute bottom-1/2 left-4 z-[1000] flex flex-col gap-1">
       <button
         onClick={() => map.zoomIn()}
         className="flex h-8 w-8 items-center justify-center rounded-lg border bg-background/95 shadow-md backdrop-blur transition hover:bg-muted"

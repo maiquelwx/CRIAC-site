@@ -121,13 +121,13 @@
     "imgPath": "/Equipe/JAMachado.webp"
   },
   {
-    "name": "Maiquel Cavalheiro",
+    "name": "Maiquel Ronaldo Cavalheiro",
     "role": "ic",
     "institution": "UFRGS",
     "area": "",
-    "description": "",
+    "description": "Desenvolvimento e manutenção da interface web do projeto, incluindo dashboards de visualização geoespacial interativa com integração de dados sociais, econômicos e geográficos, e gestão do banco de dados.",
     "links": {
-      "lattes": ""
+      "lattes": "http://lattes.cnpq.br/2071952687062616"
     },
     "imgPath": "/Equipe/MCavalheiro.webp"
   },
@@ -208,6 +208,17 @@
       "lattes": "http://lattes.cnpq.br/5068320085993516"
     },
     "imgPath": "/Equipe/TPONogueira.webp"
+  },
+    {
+    "name": "Rita de Cássia Marques Alves",
+    "role": "professor",
+    "institution": "UFRGS",
+    "area": "",
+    "description": "",
+    "links": {
+      "lattes": "http://lattes.cnpq.br/7123107007429083"
+    },
+    "imgPath": "/Equipe/rita.webp"
   },
   {
     "name": "Vivian Dornelas",
